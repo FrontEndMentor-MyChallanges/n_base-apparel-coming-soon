@@ -18,16 +18,16 @@
 </head>
 
 <body
-  class="bg-custom-linear-white lg:bg-pattern-desktop lg:bg-center lg:bg-no-repeat lg:bg-cover font-josefin w-full h-full min-h-screen text-base">
-  <div class="wrapper w-full h-full">
-    <header class="h-auto">
+  class="bg-custom-linear-white lg:bg-pattern-desktop lg:bg-center lg:bg-no-repeat lg:bg-cover font-josefin grid w-full h-full min-h-screen grid-cols-1 text-base">
+  <div class="wrapper max-w-[480px] w-full h-full justify-self-center">
+    <header class="w-full h-auto">
       <div class="logo flex items-center w-full px-10 py-8">
         <img src="./images/logo.svg" alt="company logo" class="w-[110px]">
       </div>
       <!-- To make images changing depending on screen size, has to use picture tag and change classes only in img tag -->
       <picture>
-        <source media="(min-width: 640px)" srcset="./images/hero-desktop.jpg">
-        <img src="./images/hero-mobile.jpg" alt="" class="sm:w-auto sm:h-full w-full h-full">
+        <!-- <source media="(min-width: 640px)" srcset="./images/hero-desktop.jpg"> -->
+        <img src="./images/hero-mobile.jpg" alt="" class="w-full h-full">
       </picture>
     </header>
     We're coming soon
