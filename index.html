@@ -14,28 +14,41 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./dist/style.css">
-  <script src="./dist/script.js" defer></script>
+  <script src="./src/script.js" defer></script>
 </head>
 
-<body class="">
+<body
+  class="bg-custom-linear-white lg:bg-pattern-desktop lg:bg-center lg:bg-no-repeat lg:bg-cover font-josefin w-full h-full min-h-screen text-base">
+  <div class="wrapper w-full h-full">
+    <header class="h-auto">
+      <div class="logo flex items-center w-full px-10 py-8">
+        <img src="./images/logo.svg" alt="company logo" class="w-[110px]">
+      </div>
+      <!-- To make images changing depending on screen size, has to use picture tag and change classes only in img tag -->
+      <picture>
+        <source media="(min-width: 640px)" srcset="./images/hero-desktop.jpg">
+        <img src="./images/hero-mobile.jpg" alt="" class="sm:w-auto sm:h-full w-full h-full">
+      </picture>
+    </header>
+    We're coming soon
 
-  We're coming soon
+    Hello fellow shoppers! We're currently building our new fashion store.
+    Add your email below to stay up-to-date with announcements and our launch deals.
 
-  Hello fellow shoppers! We're currently building our new fashion store.
-  Add your email below to stay up-to-date with announcements and our launch deals.
+    Email Address
 
-  Email Address
 
-  <footer>
-    <p>
-      Challenge by
-      <a href="https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0"
-        target="_blank">Frontend Mentor</a>
-    </p>.
-    <p> Coded by
-      <a href="https://www.frontendmentor.io/profile/miroslaw-mroczkowski" target="_blank">Mirosław Mroczkowski</a>.
-    </p>
-  </footer>
+    <footer>
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0"
+          target="_blank">Frontend Mentor</a>
+      </p>
+      <p> Coded by
+        <a href="https://www.frontendmentor.io/profile/miroslaw-mroczkowski" target="_blank">Mirosław Mroczkowski</a>
+      </p>
+    </footer>
+  </div>
 </body>
 
 </html>
