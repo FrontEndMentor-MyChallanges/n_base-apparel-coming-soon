@@ -18,27 +18,47 @@
 </head>
 
 <body
-  class="bg-custom-linear-white lg:bg-pattern-desktop lg:bg-center lg:bg-no-repeat lg:bg-cover font-josefin grid w-full h-full min-h-screen grid-cols-1 text-base">
-  <div class="wrapper max-w-[480px] w-full h-full justify-self-center">
-    <header class="w-full h-auto">
-      <div class="logo flex items-center w-full px-10 py-8">
-        <img src="./images/logo.svg" alt="company logo" class="w-[110px]">
-      </div>
+  class="body bg-custom-linear-white lg:bg-pattern-desktop lg:bg-center lg:bg-no-repeat lg:bg-cover font-josefin flex justify-center w-full h-full min-h-screen text-base">
+  <div
+    class="lg:ml-20 wrapper max-w-[480px] lg:max-w-full w-full justify-self-center grid lg:grid-row-flow grid-cols-1 lg:auto-row-auto lg:grid-cols-2 lg:grid-rows-3 auto-rows-min">
+    <div class="logo auto-rows-auto px-8 py-8">
+      <img src="./images/logo.svg" alt="company logo" class="w-[110px]">
+    </div>
+    <header class="header lg:row-span-3 lg:w-auto auto-rows-auto">
+
       <!-- To make images changing depending on screen size, has to use picture tag and change classes only in img tag -->
-      <picture>
-        <!-- <source media="(min-width: 640px)" srcset="./images/hero-desktop.jpg"> -->
-        <img src="./images/hero-mobile.jpg" alt="" class="w-full h-full">
+      <picture class="header-image ">
+        <source media="(min-width: 1024px)" srcset="./images/hero-desktop.jpg">
+        <img src="./images/hero-mobile.jpg" alt=""
+          class="lg:max-w-full lg:object-cover lg:h-full object-contain w-full">
       </picture>
     </header>
-    We're coming soon
+    <main class="main mt-14 px-8">
+      <h1 class="text-customGrayishRed text-5xl font-bold tracking-[0.18em] text-center uppercase">
+        <p class="text-customPink font-[300]">We're</p> coming soon
+      </h1>
 
-    Hello fellow shoppers! We're currently building our new fashion store.
-    Add your email below to stay up-to-date with announcements and our launch deals.
+      <p class="text-customPink  text-[15px] leading-relaxed text-center mt-5">Hello fellow shoppers! We're currently
+        building our
+        new
+        fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-    Email Address
+      <form class="mt-7 ">
+        <div class="border-customPink flex w-full border rounded-full">
+          <input type="text" placeholder="Email Address"
+            class="bg-transparent w-full placeholder:text-customPink rounded-full placeholder:text-[15px] placeholder:font-[300] px-6 py-2 outline-none">
+          <button
+            class="mt-[0.1px] bg-red-200 bg-custom-linear-tomato px-6 py-3 rounded-full shadow-[0_5px_15px_1px_rgba(206,151,151,0.8)] scale-[110%] hover:scale-[120%] hover:bg-blend-lighten transition-all">
+            <img src="./images/icon-arrow.svg" alt="" class="w-full h-full">
+          </button>
+        </div>
+        <p class="ml-7 mt-1 text-xs text-red-600">Please provide a valid email</p>
+      </form>
+    </main>
 
 
-    <footer>
+    <footer class="footer">
       <p>
         Challenge by
         <a href="https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0"
