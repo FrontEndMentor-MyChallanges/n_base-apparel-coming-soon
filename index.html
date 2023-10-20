@@ -17,32 +17,26 @@
   <script src="./src/script.js" defer></script>
 </head>
 
-<body class="body bg-custom-linear-white font-josefin flex justify-center w-screen h-screen text-base">
-  <!-- lg:ml-20 wrapper max-w-[480px] lg:max-w-full w-full justify-self-center grid lg:grid-row-flow grid-cols-1 lg:auto-row-auto lg:grid-cols-2 lg:grid-rows-3 auto-rows-min-->
-  <div
-    class="lg:bg-pattern-desktop lg:bg-center lg:bg-no-repeat lg:bg-cover lg:bg-scroll wrappers auto-rows-min lg:auto-rows-auto lg:grid-cols-2 lg:h-full xl:grid-cols-7 grid w-full min-h-full grid-cols-1">
-    <div class="xl:h-fit logo md:px-12 md:py-10 xl:col-span-4 px-8 py-8 xl:px-[128px] xl:py-14">
-      <img src="./images/logo.svg" alt="company logo" class="w-[110px] md:w-[150px] xl:w-[180px] xl:h-fit">
+<body class="body bg-custom-linear-white font-josefin min-h-screenh-fulltext-base flex justify-center w-full">
+  <div class="wrappers relative flex flex-col items-center w-full h-full max-w-lg">
+    <div class="background absolute hidden">
+      <img src="./images/bg-pattern-desktop.svg" alt="">
     </div>
-    <!-- header lg:row-span-3 lg:w-auto auto-rows-auto -->
-    <header
-      class="header w-full md:h-[500px] flex justify-center lg:col-start-2 lg:row-span-2 h-full lg:h-full xl:col-start-5 xl:col-end-[-1]">
-
-      <!-- To make images changing depending on screen size, has to use picture tag and change classes only in img tag -->
-      <picture class="header-image w-full h-full max-h-screen">
+    <div class="logo w-full p-8 min-[520px]:px-0">
+      <img src="./images/logo.svg" alt="company logo" class="w-[100px]">
+    </div>
+    <header class=" w-full">
+      <picture class="header-image">
         <source media="(min-width: 1024px)" srcset="./images/hero-desktop.jpg">
-        <!-- lg:max-w-screen-md lg:object-cover lg:h-full object-contain w-full -->
-        <img src="./images/hero-mobile.jpg" alt="" class="md:h-full md:object-top lg:object-center object-cover w-full">
+        <img src="./images/hero-mobile.jpg" alt="" class="w-full">
       </picture>
     </header>
-    <main class="main mt-14 md:mt-20 md:px-12 lg:col-start-1 lg:row-start-2 xl:col-span-4 px-8 xl:px-[128px]">
-      <h1
-        class="leading-[1.2] md:leading-[1.25] text-customGrayishRed text-5xl md:text-6xl font-bold tracking-[0.18em] text-center uppercase md:px-[20%] lg:px-0 xl:text-left xl:pr-[50%] 2xl:text-8xl">
+    <main class="main mt-14 px-10">
+      <h1 class="text-4xl xs:text-5xl tracking-[0.25em] leading-[1.1] font-semibold text-center uppercase">
         <p class="text-customPink font-[300]">We're</p> coming soon
       </h1>
 
-      <p
-        class="text-customPink text-[15px] leading-relaxed text-center mt-5 md:mt-8 md:px-[10vw] xl:pl-0 xl:pr-[20%] xl:text-left xl:text-lg xl:leading-loose">
+      <p class="text-customPink mt-6 text-sm xs:text-base text-center leading-[1.5]">
         Hello fellow
         shoppers!
         We're
@@ -51,24 +45,22 @@
         new
         fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
-
-      <form class="mt-7 md:mt-16 md:px-20">
-        <div class="border-customPink flex w-full border rounded-full">
-          <input type="text" placeholder="Email Address"
-            class="md:placeholder:text-base text-[15px] md:text-base md:text bg-transparent w-full placeholder:text-customPink rounded-full placeholder:text-[15px] placeholder:font-[300] px-6 py-2 md:px-8 md:py-4 outline-none">
-
-          <button
-            class="mt-[0.1px] bg-red-200 bg-custom-linear-tomato px-6 py-3 md:px-8 md:py-4 rounded-full shadow-[0_5px_15px_1px_rgba(206,151,151,0.8)] scale-[110%] hover:scale-[120%] hover:bg-blend-lighten transition-all">
-            <img src="./images/icon-arrow.svg" alt="" class="w-full h-full">
-          </button>
-        </div>
-        <p class="ml-7 md:mt-2 md:text-sm mt-1 text-xs text-red-600">Please provide a valid email</p>
-      </form>
     </main>
+    <form class="form w-full px-10 my-10" action="" novalidate>
+      <div class="input-container relative flex items-center w-full">
+        <input id="email" type="email" placeholder="Email Address"
+          class="border-customPink placeholder:text-customPink outline-2 outline-customPink input-email flex w-full px-6 py-3 text-sm leading-none border rounded-full">
+        <img src="./images/icon-error.svg" alt="" class="imgValid right-20 absolute hidden">
+        <button type="submit"
+          class="btn-submit bg-custom-linear-tomato absolute right-0 flex items-center self-center justify-center px-6 py-[10px] rounded-full">
+          <img src="./images/icon-arrow.svg" alt="" class="">
+        </button>
+      </div>
+      <p class="errorMsg hidden pl-6 mt-1 text-sm text-red-500"></p>
+    </form>
 
 
-    <footer
-      class="xl:absolute xl:col-span-4 footer text-customGrayishRed flex justify-center gap-2 mt-8  text-[10px] md:text-sm xl:max-h-min">
+    <footer class="footer flex flex-col items-center mb-4 text-sm">
       <p>
         Challenge by
         <a href="https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0"
