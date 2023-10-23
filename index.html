@@ -48,15 +48,16 @@
     </main>
     <form class="form w-full px-10 my-10" action="" novalidate>
       <div class="input-container relative flex items-center w-full">
+        <!-- border-customPink placeholder:text-customPink outline-2 outline-customPink input-email flex w-full px-6 py-3 text-sm leading-none border rounded-full -->
         <input id="email" type="email" placeholder="Email Address"
           class="border-customPink placeholder:text-customPink outline-2 outline-customPink input-email flex w-full px-6 py-3 text-sm leading-none border rounded-full">
         <img src="./images/icon-error.svg" alt="" class="imgValid right-20 absolute hidden">
         <button type="submit"
-          class="btn-submit bg-custom-linear-tomato absolute right-0 flex items-center self-center justify-center px-6 py-[10px] rounded-full">
+          class="btn-submit bg-custom-linear-tomato absolute right-0 flex items-center self-center justify-center px-6 py-[10px] scale-105 rounded-full">
           <img src="./images/icon-arrow.svg" alt="" class="">
         </button>
       </div>
-      <p class="errorMsg hidden pl-6 mt-1 text-sm text-red-500"></p>
+      <p class="errorMsg hidden pl-6 mt-1 text-sm text-red-500">Please provide a valid email</p>
     </form>
 
 
