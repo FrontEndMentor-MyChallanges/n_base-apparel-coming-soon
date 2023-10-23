@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/style.css">
+  <script src="./src/script.js" defer></script>
+</head>
+
+<body class="body bg-custom-linear-white font-josefin min-h-screenh-fulltext-base flex justify-center w-full">
+  <div class="wrappers relative flex flex-col items-center w-full h-full max-w-lg">
+    <div class="background absolute hidden">
+      <img src="./images/bg-pattern-desktop.svg" alt="">
+    </div>
+    <div class="logo w-full p-8 min-[520px]:px-0">
+      <img src="./images/logo.svg" alt="company logo" class="w-[100px]">
+    </div>
+    <header class=" w-full">
+      <picture class="header-image">
+        <source media="(min-width: 1024px)" srcset="./images/hero-desktop.jpg">
+        <img src="./images/hero-mobile.jpg" alt="" class="w-full">
+      </picture>
+    </header>
+    <main class="main mt-14 px-10">
+      <h1 class="text-4xl xs:text-5xl tracking-[0.25em] leading-[1.1] font-semibold text-center uppercase">
+        <p class="text-customPink font-[300]">We're</p> coming soon
+      </h1>
+
+      <p class="text-customPink mt-6 text-sm xs:text-base text-center leading-[1.5]">
+        Hello fellow
+        shoppers!
+        We're
+        currently
+        building our
+        new
+        fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+    </main>
+    <form class="form w-full px-10 my-10" action="" novalidate>
+      <div class="input-container relative flex items-center w-full">
+        <input id="email" type="email" placeholder="Email Address"
+          class="border-customPink placeholder:text-customPink outline-2 outline-customPink input-email flex w-full px-6 py-3 text-sm leading-none border rounded-full">
+        <img src="./images/icon-error.svg" alt="" class="imgValid right-20 absolute hidden">
+        <button type="submit"
+          class="btn-submit bg-custom-linear-tomato absolute right-0 flex items-center self-center justify-center px-6 py-[10px] rounded-full">
+          <img src="./images/icon-arrow.svg" alt="" class="">
+        </button>
+      </div>
+      <p class="errorMsg hidden pl-6 mt-1 text-sm text-red-500"></p>
+    </form>
+
+
+    <footer class="footer flex flex-col items-center mb-4 text-sm">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0"
+          target="_blank"
+          class="text-customPink hover:underline hover:underline-offset-2 visited:text-customTomato">Frontend Mentor</a>
+      </p>
+      <p> Coded by
+        <a href="https://www.frontendmentor.io/profile/miroslaw-mroczkowski" target="_blank"
+          class="text-customPink hover:underline hover:underline-offset-2 visited:text-customTomato">Mirosław
+          Mroczkowski</a>
+      </p>
+    </footer>
+  </div>
+</body>
+
+</html>
