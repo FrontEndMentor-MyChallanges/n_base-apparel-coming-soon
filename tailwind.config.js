@@ -21,9 +21,7 @@ module.exports = {
 			fontFamily: {
 				josefin: ['Josefin Sans', ...defaultTheme.fontFamily.sans],
 			},
-			screens: {
-				...defaultTheme.screens,
-			},
+
 			screens: {
 				xs: '475px',
 				sm: '640px',
